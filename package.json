@@ -1,0 +1,60 @@
+{
+  "name": "web-performance-mcp",
+  "version": "0.0.0",
+  "description": "MCP server for compact web performance analysis using Google PageSpeed Insights and Chrome UX Report APIs.",
+  "type": "module",
+  "bin": {
+    "web-performance-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "release:doctor": "../zero-release/bin/zero-release doctor --branches main --plugins release-notes,changelog,package-json,git-commit,npm,github-release",
+    "release:dry-run": "../zero-release/bin/zero-release --dry-run --branches main --plugins release-notes,changelog,package-json,git-commit,npm,github-release",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "keywords": [
+    "mcp",
+    "pagespeed",
+    "crux",
+    "core-web-vitals",
+    "lighthouse",
+    "performance"
+  ],
+  "homepage": "https://github.com/teles/web-performance-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/teles/web-performance-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teles/web-performance-mcp.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  },
+  "packageManager": "pnpm@10.22.0"
+}

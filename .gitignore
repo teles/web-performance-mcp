@@ -1,0 +1,26 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.credentials.json
+*.secrets.json
+credentials.json
+token.json
+*token*.json
+
+# Dependencies/build
+node_modules/
+dist/
+coverage/
+.turbo/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
