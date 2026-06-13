@@ -32,7 +32,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - uses: zero-release/zero-release@v1
+      - uses: zero-release/zero-release@v1.2.2
         id: release
         with:
           branches: "main"

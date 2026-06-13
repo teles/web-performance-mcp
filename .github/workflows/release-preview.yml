@@ -25,7 +25,7 @@ jobs:
       - run: pnpm test
       - run: pnpm build
 
-      - uses: zero-release/zero-release@v1
+      - uses: zero-release/zero-release@v1.2.2
         id: release
         with:
           branches: "main"
