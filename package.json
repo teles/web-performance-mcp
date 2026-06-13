@@ -1,6 +1,6 @@
 {
   "name": "web-performance-mcp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "MCP server for compact web performance analysis using Google PageSpeed Insights and Chrome UX Report APIs.",
   "type": "module",
   "bin": {
