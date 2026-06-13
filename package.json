@@ -4,7 +4,7 @@
   "description": "MCP server for compact web performance analysis using Google PageSpeed Insights and Chrome UX Report APIs.",
   "type": "module",
   "bin": {
-    "web-performance-mcp": "./dist/index.js"
+    "web-performance-mcp": "dist/index.js"
   },
   "files": [
     "dist",

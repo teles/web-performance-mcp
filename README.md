@@ -170,12 +170,12 @@ The npm package name is:
 web-performance-mcp
 ```
 
-The name is currently available if `npm view web-performance-mcp` returns `404 Not Found`.
+The name is currently available if `npm view web-performance-mcp` returns `404 Not Found`. During `npm publish`, however, a `404 Not Found` usually means the workflow cannot create or access that package name with the current npm authentication.
 
 ### One-Time npm Setup
 
 1. Create or log in to your npm account.
-2. Publish the package once or configure npm Trusted Publishing for the GitHub repository.
+2. Publish the package once with an npm account that can create unscoped public packages, or configure npm Trusted Publishing for the GitHub repository before the automated release runs.
 3. For Trusted Publishing, configure this package on npmjs.com with:
 
 ```text
@@ -195,6 +195,8 @@ permissions:
 ```
 
 Trusted Publishing requires npm CLI 11.5.1+ and Node.js 22.14.0+. The release workflow uses Node 24.
+
+If the release workflow fails while publishing with `npm error 404 Not Found - PUT https://registry.npmjs.org/web-performance-mcp`, confirm that the package exists under your npm account or that Trusted Publishing is configured for exactly `teles/web-performance-mcp` and workflow filename `release.yml`.
 
 ### Release Flow
 
